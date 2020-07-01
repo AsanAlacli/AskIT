@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { login } from './UserFunctions'
+import Footer from './footer'
 
 class Login extends Component {
     constructor() {
@@ -38,33 +39,36 @@ class Login extends Component {
                 <div className="row">
                     <div className="col-md-6 mt-5 mx-auto">
                         <form noValidate onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+                            <h1 className="h2 mb-5 font-weight-bolder text-center">Log In</h1>
                             <div className="form-group">
-                                <label htmlFor="email">Email Address</label>
+                                <label htmlFor="email">E-Mail</label>
                                 <input type="email"
-                                    className="form-control"
+                                    className="form-control form-control-lg"
                                     name="email"
-                                    placeholder="Enter Email"
+                                    placeholder="email@ex.com"
                                     value={this.state.email}
                                     onChange={this.onChange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="password">Password </label>
                                 <input type="password"
-                                    className="form-control"
+                                    className="form-control form-control-lg"
                                     name="password"
-                                    placeholder="Enter Password"
+                                    placeholder="Enter your password"
                                     value={this.state.password}
                                     onChange={this.onChange} />
                             </div>
 
-                            <button type="submit" className="btn btn-lg btn-primary btn-block">
-                                Sign in
+                            <button type="submit" className="btn btn-lg btn-warning btn-block">
+                                Log In
                             </button>
                         </form>
                     </div>
                 </div>
+                <Footer />           
+
             </div>
+
         )
     }
 }

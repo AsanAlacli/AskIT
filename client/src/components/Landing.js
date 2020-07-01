@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
-
+import image from '../assets/img/3.png'
+import Footer from './footer'
 class Landing extends Component {
     render () {
         return (
-            <div className="container">
-                <div className="jumbotron mt-5">
-                    <div className="col-sm-8 mx-auto">
-                        <h1 className="text-center">WELCOME</h1>
-                    </div>
-                </div>
-            </div>
+<div class="container px-lg-5">
+  <div class="row mx-lg-n5">
+    <h1 class="col py-4 px-lg-5 font-weight-bolder text-justify-center"> Welcome To <span> Ask It </span><br></br> App</h1>
+    <div class="col py-3 px-lg-5 w-50">    
+     <img src={image} alt="Logo" class="rounded float-right" title="Home" style={{height: "345px",with: "520px"}}/>
+    </div>
+  </div>
+
+ <Footer />           
+</div>
         )
     }
 }
