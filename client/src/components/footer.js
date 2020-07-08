@@ -5,7 +5,7 @@ import React, { Component } from 'react'
         return (
 
             <div className="container ">
-                <footer className="page-footer font-small  ">
+                <footer className="page-footer font-small fixed-bottom ">
 
                     <div className="footer-copyright text-center py-5">© 2020 Copyright: Flaskdigger Group3
                     </div>

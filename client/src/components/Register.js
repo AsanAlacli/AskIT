@@ -41,7 +41,7 @@ class Register extends Component {
                 <div className="row">
                     <div className="col-md-6 mt-5 mx-auto">
                         <form noValidate onSubmit={this.onSubmit}>
-                            <h1 className="h2 mb-5 font-weight-bolder text-center"> Register Now </h1>
+                            <h1 className="h2 mb-3 font-weight-bolder text-center"> Register Now </h1>
                             <div className="form-group">
                                 <label htmlFor="first_name">First Name</label>
                                 <input type="text"

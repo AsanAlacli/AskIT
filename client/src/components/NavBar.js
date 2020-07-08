@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import logo from '../assets/img/4.png'
+import logo from '../assets/img/z.png'
 class Navbar extends Component {
-    logOut (e) {
+    logOut(e) {
         e.preventDefault()
         localStorage.removeItem('usertoken')
         this.props.history.push(`/`)
     }
 
-    render () {
+    render() {
         const loginRegLink = (
             <ul className="navbar-nav">
                 <li className="nav-item">
@@ -25,14 +25,19 @@ class Navbar extends Component {
         )
 
         const userLink = (
-            <ul className="navbar-nav ">              
+            <ul className="navbar-nav ">
                 <li className="nav-item">
-                    <Link to="/profile" className="nav-link">
+                    <Link to="/profile" className="nav-link text-dark">
                         User
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <a href="#" onClick={this.logOut.bind(this)} className="nav-link">
+                    <a href="/forum" className="nav-link text-dark">
+                        Forum
+                    </a>
+                </li>
+                <li className="nav-item">
+                    <a href="/" onClick={this.logOut.bind(this)} className="nav-link text-dark">
                         Logout
                     </a>
                 </li>
@@ -52,11 +57,11 @@ class Navbar extends Component {
                 </button>
                 <div>
                     <Link to="/" className="nav-link" >
-                        <img src={logo} alt="Logo" title="Home" style={{height: "40px",with: "40px"}}/>                  
+                        <img src={logo} alt="Logo" title="Home" style={{ height: "50px", with: "50px" }} />
                     </Link>
                 </div>
 
-               <div className="collapse navbar-collapse justify-content-md-end"
+                <div className="collapse navbar-collapse justify-content-md-end"
                     id="navbar1">
                     <ul className="navbar-nav ">
                         <li className="nav-item">
