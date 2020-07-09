@@ -17,12 +17,18 @@ class Question extends Component{
     }
     render() {
         return (
-            <div>
-                <form >
-                    <h3>Welcome to Discussion Forum</h3>
-                    <input type="text" onChange={this.handleChange} placeholder="Post Title" value={this.state.postTitle} name="postTitle"></input>
-                    <input type="text"  onChange={this.handleChange} placeholder="Question" value={this.state.postContent} name="postContent"></input><br/>
-                    <input type="button" onClick={this.postSubmit} value="Post" ></input>
+            <div className="container">
+                <form className="row justify-content-lg-center  ">
+                   <h3 className="justify-content-lg-center"> Welcome to Discussion Forum</h3>
+                   <div className="form-group offset-lg-10 col-sm-12">
+                     <input type="text" onChange={this.handleChange} placeholder="Post Title" value={this.state.postTitle} name="postTitle"></input>
+                   </div>  
+                   <div className="form-group  offset-lg-10  col-sm-12">
+                     <input type="text"  onChange={this.handleChange} placeholder="Question" value={this.state.postContent} name="postContent"></input><br/>
+                   </div> 
+                   <div className="form-group offset-lg-11 col-sm-12">
+                     <input type="button" onClick={this.postSubmit} value="Post" ></input>
+                   </div>    
                 </form>
                 
             </div>
