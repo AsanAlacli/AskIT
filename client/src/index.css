@@ -12,3 +12,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+
+.social-container {
+  background: #585558;
+  padding: 25px 50px;
+}
+
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+    transition: 1s 0s linear;
+  }
+
+  a.social:hover {
+    transform: translateY(-2px);
+    transition: 1s 0s linear;
+  }
+  a.youtube {
+    color:black;
+  }
+  
+  a.github  {
+    color:black;
+  }
+  

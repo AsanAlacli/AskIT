@@ -19,7 +19,7 @@ class Question extends Component{
         return (
             <div className="container">
                 <form className="row justify-content-lg-center  ">
-                   <h3 className="justify-content-lg-center"> Welcome to Discussion Forum</h3>
+                   <h3 className="mt-4 justify-content-lg-center"> Welcome to Discussion Forum</h3>
                    <div className="form-group offset-lg-10 col-sm-12">
                      <input type="text" onChange={this.handleChange} placeholder="Post Title" value={this.state.postTitle} name="postTitle"></input>
                    </div>  
