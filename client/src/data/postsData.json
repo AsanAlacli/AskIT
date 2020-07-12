@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "postTitle": "Post 1",
         "postContent": "How to register a course?",
         "postDate": "12-12-12",
@@ -11,7 +11,7 @@
 
     },
     {
-        "id": 2,
+        "id": 1,
         "postTitle": "Post 2",
         "postContent": "How to de-register a course?",
         "postDate": "13-12-12",
@@ -31,7 +31,7 @@
         "postDislikes":"2"
     },
     {
-        "id": 1,
+        "id": 3,
         "postTitle": "Post 4",
         "postContent": "How to make a ChatBot?",
         "postDate": "12-12-20",

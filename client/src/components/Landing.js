@@ -6,7 +6,7 @@ class Landing extends Component {
         return (
 <div class="container px-lg-5">
   <div class="row mx-lg-n5">
-    <h1 class="col py-4 px-lg-5 font-weight-bolder text-justify-center"> Welcome To <span> Ask It </span><br></br> App</h1>
+    <h1 class="col py-4 px-lg-5 font-weight-bolder text-justify-center"> Welcome To Ask It App</h1>
     <div class="col py-3 px-lg-5 w-50">    
      <img src={image} alt="Logo" class="rounded float-right" title="Home" style={{height: "345px",with: "520px"}}/>
     </div>
