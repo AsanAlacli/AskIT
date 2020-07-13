@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import{Container,Form,Row,Col,Button} from 'react-bootstrap'
 
 class Question extends Component{
 
@@ -26,22 +27,21 @@ class Question extends Component{
     } */
     render() {
         return (
-            <div className="container">
-                <form className="row justify-content-lg-center  ">
-                   <h3 className="mt-4 justify-content-lg-center"> {this.props.courseName} </h3>
-                   <div className="form-group offset-lg-10 col-sm-12">
-                     <input type="text" onChange={this.handleChange} placeholder="Post Title" value={this.state.postTitle} name="postTitle"></input>
-                   </div>  
-                   <div className="form-group  offset-lg-10  col-sm-12">
-                     <input type="text"  onChange={this.handleChange} placeholder="Question" value={this.state.postContent} name="postContent"></input><br/>
-                   </div> 
-                   <div className="form-group offset-lg-11 col-sm-12">
-                     <button onClick={(val) => this.props.onClick({qTitle:this.state.postTitle, qContent:this.state.postContent})} >Post</button>
-                    {/* <input type="button" onClick={(title,question) => this.props.postQuestion()} value="Post" ></input> */}
-                   </div>    
-                </form>
+            <Container>
+                <Form>
+                    <Row className="justify-content-lg-center  ">
+                      <h3 className="mt-3 justify-content-sm-center"> {this.props.courseName} </h3> 
+                      <Col xs={12} className="form-group  offset-lg-7 ">
+                        <textarea  rows="4" cols="50" type="text"  onChange={this.handleChange} placeholder="Question" value={this.state.postContent} name="postContent"></textarea><br/>
+                      </Col> 
+                      <Col xs={12} className="form-group offset-lg-11">
+                        <Button bsStyle="primary" onClick={(val) => this.props.onClick({qTitle:this.state.postTitle, qContent:this.state.postContent})} >Post</Button>
+                       {/* <input type="Button" onClick={(title,question) => this.props.postQuestion()} value="Post" ></input> */}
+                      </Col>
+                    </Row>      
+                </Form>
                 
-            </div>
+            </Container>
             
         );
     }

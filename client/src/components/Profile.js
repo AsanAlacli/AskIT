@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import jwt_decode from 'jwt-decode'
+import{Container,ListGroup,Col,Table} from 'react-bootstrap'
+import Footer from './footer'
+
 
 class Profile extends Component {
     constructor() {
@@ -23,14 +26,14 @@ class Profile extends Component {
 
     render () {
         return (
-            <div className="container">
-                <div className="jumbotron mt-5">
-                    <div className="col-sm-8 mx-auto">
+            <Container>
+                <ListGroup className="jumbotron mt-5">
+                    <Col sm={8} className="mx-auto">
                         <h3 className="text-center">{this.state.first_name} {this.state.last_name}</h3>
-                    </div>
-                    <table className="table col-md-6 mx-auto">
+                    </Col>
+                    <Table striped bordered hover variant="warning" className="col-md-6 mx-auto"> 
                         <tbody>
-                            <tr>
+                        <tr >
                                 <td>First Name</td>
                                 <td>{this.state.first_name}</td>
                             </tr>
@@ -43,9 +46,11 @@ class Profile extends Component {
                                 <td>{this.state.email}</td>
                             </tr>
                         </tbody>
-                    </table>
-                </div>
-            </div>
+                    </Table>
+                </ListGroup>
+                <Footer/>
+
+            </Container>
         )
     }
 }

@@ -7,6 +7,11 @@ import Footer from './footer'
 import _ from 'lodash';
 import CourseData from '../data/coursewisePosts.json'
 import Forum from './Forum';
+import{Container,Row,Col,Button} from 'react-bootstrap'
+import Reply from './Reply'
+
+
+
 
 class Post extends Component {
 
@@ -16,60 +21,77 @@ class Post extends Component {
             likes:4,
             dislikes:8,
             posts: PostData,
-            coursePosts:CourseData
+            coursePosts:CourseData,
+            recentReply:"",
+            postId:0,
+            
         }
     }
 
     onClickLike(val){
         this.setState(state => {
-            const newPosts = this.state.posts;
-            newPosts[val].postLikes++;
+            const newPosts = this.state.coursePosts;
+            newPosts[val].likes++;
             return newPosts;
         });
         console.log('state update -> ', this.state.posts );
     }  
     onClickDislike(val){
         this.setState(state => {
-            const newPosts = this.state.posts;
-            newPosts[val].postDislikes++;
+            const newPosts = this.state.coursePosts;
+            newPosts[val].dislikes++;
             return newPosts;
         });
         console.log('state update -> ', this.state.posts );
     }
 
-
-
     handleChange = e=>{
         this.setState({
-            [e.target.value]:(e.target.value).toString()
+            [e.target.value]:(e.target.value).toString(),
+            
         },
-        console.log(e.target.value)
+ //       console.log(e.target.value)
         )
+    }
+
+    updateReply(reply){
+        this.setState({ 
+            reply:this.state.reply
+            
+        })
+        console.log("Reply is ->",reply);
+    }
+    postComment(comment){
+        this.state.recentReply=comment;
+        console.log("comment---",this.state.recentReply);
     }
       
     render() {
-        console.log("New DAta---",this.props.parent);
-      //   console.log("coursename------>",this.props.courseName);
+        //  console.log("New DAta---",this.props.parent);
+        //   console.log("coursename------>",this.props.courseName);
          
         return (
-            <div>
+            <Container>
                 {
                    this.props.parent.coursewisePosts.map(post =>{
-                    if(this.props.parent.courseName!=post.postCourse)
-                    {
-                         return (
-                             <div>
-                                 
-                             </div>
-                         );
-                    }
-                    //console.log("pposts",post);
-                    else
+                       this.state.postId = post.postId;
+                       console.log("Post Id ",this.state.postId);
+
+                       if(this.props.parent.courseName!=post.postCourse)
+                       {
+                            return (
+                                <div>
+                                    
+                                </div>
+                            );
+                       }
+                       //console.log("pposts",post);
+                       else
                     return(
-                        <div className="container">
-                            <div className="row border border-warning m-5 pb-5">
+                            <div className="row border rounded border-warning m-5 pb-5">
                                 <div className="col col-12 " key={post.postId}>
-                                  <h6> {post.postContent}</h6>
+                                    {/* <h4> {post.postTitle}</h4> */}
+                                    <h6> {post.postContent}</h6>
                                 </div>
                                 <div className="col-12">
                                 <p>Posted By:  {post.author}</p>
@@ -78,23 +100,33 @@ class Post extends Component {
                                 <p>Posted on  {post.date}</p>
                                 </div>
                                 <div className="col-12">
-                                <p><img src={Like} alt="Likes" name="likes" onClick={this.likeClicked}/>
-                                    {post.postLikes} Fellows
+                                <p>Posted on  {post.time}</p>
+                                </div>
+                                <div className="col-12">
+                                <p><img src={Like} alt="Likes" name="likes" onClick={() => this.onClickLike(post.postId)}/>
+                                    {post.likes} Like
                                 </p>
                                 </div>
                                 <div className="col-12">
                                 <p><img src={Dislike} name="dislikes" alt="Dislikes" onClick={() => this.onClickDislike(post.postId)}/>
-                                    {post.dislikes} Fellows
+                                    {post.dislikes} Dislike
                                 </p>
+                                </div>
+                                <br/>
+                                <Reply reply={post.replies}/>
+                                <div className="col-12">
+                                    <textarea rows="4" cols="30"  onChange={this.handleChange} value={this.state.recentReply} name="recentReply" placeholder="Reply.."></textarea>
+                                    <Col offset-0>
+                                       <Button bsStyle="primary" onClick={(comment)=>this.postComment(this.state.recentReply)}>Reply</Button>
+                                    </Col>
                                 </div>
 
                             </div>
-                        </div>  
                        )
                    })
                 }   
-                <Footer/>
-            </div>
+            </Container>
+
         );
     }
 }

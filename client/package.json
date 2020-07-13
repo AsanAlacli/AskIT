@@ -10,6 +10,7 @@
     "flask": "^0.2.10",
     "jwt-decode": "^2.2.0",
     "react": "^16.5.2",
+    "react-bootstrap": "^1.2.1",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4"

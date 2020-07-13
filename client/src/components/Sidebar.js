@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CoursesMenu from './CoursesMenu';
 import CourseList from '../data/courses.json';
 import CourseHandler from './Forum'
-
+import Footer from './footer'
 
 class Sidebar extends Component {
 
@@ -19,16 +19,16 @@ class Sidebar extends Component {
                        return(
                             <div className="course" key={courseList.name}>
                             
-                                <button onClick={(val) => this.props.onClick(courseList.name)} >{courseList.name}</button>
+                                <button className="btn btn-light" onClick={(val) => this.props.onClick(courseList.name)} >{courseList.name}</button>
                         
                         
                                 {/* <Link to='/profile'  >{courseList.name}</Link>  */}
-                                
                             </div>
                             
                        )
                    })
                 }
+
             </div>
         );
     }

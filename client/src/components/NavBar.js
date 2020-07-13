@@ -17,7 +17,7 @@ class Navbar extends Component {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/register" className="nav-link text-dark">
+                    <Link to="/register" className="nav-link text-dark ">
                         Register
                     </Link>
                 </li>
@@ -46,14 +46,14 @@ class Navbar extends Component {
 
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-warning rounded">
-                <button className="navbar-toggler border border-danger"
+                <button className="navbar-toggler  border border-dark"
                     type="button"
                     data-toggle="collapse"
                     data-target="#navbar1"
                     aria-controls="navbar1"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon border border-danger"></span>
+                    <span className="navbar-toggler-icon border border-dark"></span>
                 </button>
                 <div>
                     <Link to="/" className="nav-link" >
