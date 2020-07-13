@@ -29,18 +29,17 @@ class Question extends Component{
         return (
             <Container>
                 <Form>
-                    <Row className="justify-content-lg-center  ">
-                      <h3 className="mt-3 justify-content-sm-center"> {this.props.courseName} </h3> 
-                      <Col xs={12} className="form-group  offset-lg-7 ">
+                    <Row style={{textAlign: "center"}}>
+                      <Col xs={12} style={{textAlign: "center"}}>
+                      <h3 style={{textAlign: "center"}}> {this.props.courseName} </h3> 
                         <textarea  rows="4" cols="50" type="text"  onChange={this.handleChange} placeholder="Question" value={this.state.postContent} name="postContent"></textarea><br/>
                       </Col> 
-                      <Col xs={12} className="form-group offset-lg-11">
-                        <Button bsStyle="primary" onClick={(val) => this.props.onClick({qTitle:this.state.postTitle, qContent:this.state.postContent})} >Post</Button>
+                      <Col xs={12} style={{textAlign: "center"}}>
+                        <Button className="btn-info"onClick={(val) => this.props.onClick({qTitle:this.state.postTitle, qContent:this.state.postContent})} >Post</Button>
                        {/* <input type="Button" onClick={(title,question) => this.props.postQuestion()} value="Post" ></input> */}
                       </Col>
                     </Row>      
-                </Form>
-                
+                </Form> 
             </Container>
             
         );

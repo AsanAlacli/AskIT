@@ -41,6 +41,7 @@ class Forum extends Component {
                  <SideBar onClick = {this.courseClick}/>
                  <Post id="postDiv"parent={this.state}/>
                 </Container>
+                
             );
         }
     

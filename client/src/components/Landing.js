@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import image from '../assets/img/mohaimn.jpg'
+import M from '../assets/img/Mohaimn.jpg'
+import D from '../assets/img/Dawar.png'
+import F from '../assets/img/Farnoosh.jpg'
+import H from '../assets/img/Hasan.png'
 import Footer from './footer'
 import {Link} from 'react-router-dom';
 import{Jumbotron,Container,Row,Col,Image,Button} from 'react-bootstrap'
@@ -11,29 +14,29 @@ class Landing extends Component {
                   <h2>Welcome to ASK-IT </h2>
                   <p>In ASK-IT website you can ask about courses and get answers from friends, sharing information about exams .</p>
                   <Link to ="/register">
-                    <Button bsStyle="primary"> Register Now</Button>
+                    <Button className="btn-info"> Register Now</Button>
                   </Link>
                 </Jumbotron>  
                 <Row className="show-grid text-center">
                   <Col xs={12} sm={3} className="person-wrapper">
-                    <Image src={image} circle className="profile-pic"/>
-                    <h3>Mohaimn Layth</h3>
-                    <p>gdhjkldkjhgfghjklskjhgfdfghjklkjhgsffghj</p>
+                    <Image src={M} circle className="profile-pic"/>
+                    <h3> Mohaimn</h3>
+                    <p> Front-End developer</p>
                   </Col> 
                   <Col xs={12} sm={3} className="person-wrapper">
-                    <Image src={image} circle className="profile-pic"/>
-                    <h3>Mohaimn Layth</h3>
-                    <p>gdhjkldkjhgfghjklskjhgfdfghjklkjhgsffghj</p>
+                    <Image src={D} circle className="profile-pic"/>
+                    <h3> Dawar</h3>
+                    <p>Front-End developer</p>
                   </Col> 
                   <Col xs={12} sm={3} className="person-wrapper">
-                    <Image src={image} circle className="profile-pic"/>
-                    <h3>Mohaimn Layth</h3>
-                    <p>gdhjkldkjhgfghjklskjhgfdfghjklkjhgsffghj</p>
+                    <Image src={F} circle className="profile-pic"/>
+                    <h3> Farnoosh</h3>
+                    <p>Back-End developer</p>
                   </Col>  
                   <Col xs={12} sm={3} className="person-wrapper">
-                    <Image src={image} circle className="profile-pic"/>
-                    <h3>Mohaimn Layth</h3>
-                    <p>gdhjkldkjhgfghjklskjhgfdfghjklkjhgsffghj</p>
+                    <Image src={H} circle className="profile-pic"/>
+                    <h3>Hasan</h3>
+                    <p>Back-End developer</p>
                   </Col> 
                 </Row>
                 <Footer/>           

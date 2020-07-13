@@ -89,27 +89,27 @@ class Post extends Component {
                        else
                     return(
                             <div className="row border rounded border-warning m-5 pb-5">
-                                <div className="col col-12 " key={post.postId}>
+                                <div className="col col-12 mt-2" key={post.postId}>
                                     {/* <h4> {post.postTitle}</h4> */}
-                                    <h6> {post.postContent}</h6>
+                                    <h6 style={{fontWeight:"bold"}}> {post.postContent}</h6>
                                 </div>
                                 <div className="col-12">
-                                <p>Posted By:  {post.author}</p>
+                                <p><span style={{fontWeight:"bold"}}>Posted By:</span>  {post.author}</p>
                                 </div>
                                 <div className="col-12">
-                                <p>Posted on  {post.date}</p>
+                                <p><span style={{fontWeight:"bold"}}>Posted on: </span> {post.date}</p>
                                 </div>
                                 <div className="col-12">
-                                <p>Posted on  {post.time}</p>
+                                <p><span style={{fontWeight:"bold"}}>Posted at:  </span>{post.time}</p>
                                 </div>
                                 <div className="col-12">
                                 <p><img src={Like} alt="Likes" name="likes" onClick={() => this.onClickLike(post.postId)}/>
-                                    {post.likes} Like
+                                    {post.likes} <span style={{fontWeight:"bold"}}>Like</span>
                                 </p>
                                 </div>
                                 <div className="col-12">
                                 <p><img src={Dislike} name="dislikes" alt="Dislikes" onClick={() => this.onClickDislike(post.postId)}/>
-                                    {post.dislikes} Dislike
+                                    {post.dislikes} <span style={{fontWeight:"bold"}}>Dislike</span>
                                 </p>
                                 </div>
                                 <br/>
@@ -117,14 +117,18 @@ class Post extends Component {
                                 <div className="col-12">
                                     <textarea rows="4" cols="30"  onChange={this.handleChange} value={this.state.recentReply} name="recentReply" placeholder="Reply.."></textarea>
                                     <Col offset-0>
-                                       <Button bsStyle="primary" onClick={(comment)=>this.postComment(this.state.recentReply)}>Reply</Button>
+                                       <Button className="btn-info" onClick={(comment)=>this.postComment(this.state.recentReply)}>Reply</Button>
                                     </Col>
                                 </div>
 
                             </div>
+                            
                        )
                    })
-                }   
+
+                } 
+                <Footer/>
+                  
             </Container>
 
         );

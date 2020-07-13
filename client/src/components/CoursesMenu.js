@@ -2,31 +2,30 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import CourseList from '../data/courses.json';
 import './Stylesheets/CoursesMenu.css';
-import Question from './Question'
+
 
 class CoursesMenu extends Component {
 
     render() {
-        const {onClick} = this.props;
-        console.log(onClick);
         return (
-            <div className="coursesList">
-                <h4>Courses</h4>
+    <div classNme="container-fluid">
+      <div className="row row-offcanvas row-offcanvas-right">
+        <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="sidebar-nav">
+                    <h4>Courses</h4>
                 {
                    CourseList.map(courseList =>{
                        return(
-                            <div className="course">
-                                <button onClick={ () => onClick(courseList.name)} >{courseList.name}</button>
-                        
-                        
-                                {/* <Link to='/profile'  >{courseList.name}</Link>  */}
-                                
+                            <div className="nav">
+                                <Link to='/profile'>{courseList.name}</Link> 
                             </div>
-                            
                        )
                    })
                 }
             </div>
+        </div>
+      </div>
+    </div>
         );
     }
 }

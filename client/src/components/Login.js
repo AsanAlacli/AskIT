@@ -59,7 +59,7 @@ class Login extends Component {
                                     onChange={this.onChange} />
                             </div>
 
-                            <button type="submit" className="btn btn-lg btn-warning btn-block">
+                            <button type="submit" className="btn btn-lg btn-info btn-block">
                                 Log In
                             </button>
                         </form>
