@@ -12,14 +12,14 @@ class Sidebar extends Component {
 
     render() {
         return (
-            <div className="coursesList ">
+            <div className="col col-lg-3 col-md-12 col-xs-12 float-right pb-2 m-4 border rounded">
                 <h4 >Courses</h4>
                 {
                    CourseList.map(courseList =>{
                        return(
                             <div className="course" key={courseList.name}>
                             
-                                <button className="btn btn-info" onClick={(val) => this.props.onClick(courseList.name)} >{courseList.name}</button>
+                                <button className="btn btn-info rounded-pill" onClick={(val) => this.props.onClick(courseList.name)} >{courseList.name}</button>
                         
                         
                                 {/* <Link to='/profile'  >{courseList.name}</Link>  */}

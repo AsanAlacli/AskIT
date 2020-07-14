@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { login } from './UserFunctions'
 import Footer from './footer'
+import{Jumbotron,Container,Row,Col,Image,Button} from 'react-bootstrap'
 
 class Login extends Component {
     constructor() {
@@ -35,8 +36,8 @@ class Login extends Component {
 
     render () {
         return (
-            <div className="container">
-                <div className="row">
+            <Container>
+                <Row>
                     <div className="col-md-6 mt-5 mx-auto">
                         <form noValidate onSubmit={this.onSubmit}>
                             <h1 className="h2 mb-5 font-weight-bolder text-center">Log In</h1>
@@ -59,16 +60,14 @@ class Login extends Component {
                                     onChange={this.onChange} />
                             </div>
 
-                            <button type="submit" className="btn btn-lg btn-info btn-block">
+                            <Button type="submit" className="btn btn-lg btn-info btn-block rounded-pill">
                                 Log In
-                            </button>
+                            </Button>
                         </form>
                     </div>
-                </div>
+                </Row>
                 <Footer />           
-
-            </div>
-
+            </Container>
         )
     }
 }

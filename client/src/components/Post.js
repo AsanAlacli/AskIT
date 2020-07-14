@@ -9,6 +9,9 @@ import CourseData from '../data/coursewisePosts.json'
 import Forum from './Forum';
 import{Container,Row,Col,Button} from 'react-bootstrap'
 import Reply from './Reply'
+import { faThumbsUp , faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 
@@ -71,7 +74,7 @@ class Post extends Component {
         //   console.log("coursename------>",this.props.courseName);
          
         return (
-            <Container>
+            <div className="container-fluid">
                 {
                    this.props.parent.coursewisePosts.map(post =>{
                        this.state.postId = post.postId;
@@ -88,6 +91,7 @@ class Post extends Component {
                        //console.log("pposts",post);
                        else
                     return(
+                        
                             <div className="row border rounded border-warning m-5 pb-5">
                                 <div className="col col-12 mt-2" key={post.postId}>
                                     {/* <h4> {post.postTitle}</h4> */}
@@ -103,12 +107,12 @@ class Post extends Component {
                                 <p><span style={{fontWeight:"bold"}}>Posted at:  </span>{post.time}</p>
                                 </div>
                                 <div className="col-12">
-                                <p><img src={Like} alt="Likes" name="likes" onClick={() => this.onClickLike(post.postId)}/>
+                                <p className="thu"><FontAwesomeIcon icon={ faThumbsUp } size="1x" onClick={() => this.onClickLike(post.postId)}/>
                                     {post.likes} <span style={{fontWeight:"bold"}}>Like</span>
                                 </p>
                                 </div>
                                 <div className="col-12">
-                                <p><img src={Dislike} name="dislikes" alt="Dislikes" onClick={() => this.onClickDislike(post.postId)}/>
+                                <p className="thd" ><FontAwesomeIcon  icon={ faThumbsDown }  size="1x" onClick={() => this.onClickDislike(post.postId)}/>
                                     {post.dislikes} <span style={{fontWeight:"bold"}}>Dislike</span>
                                 </p>
                                 </div>
@@ -117,7 +121,7 @@ class Post extends Component {
                                 <div className="col-12">
                                     <textarea rows="4" cols="30"  onChange={this.handleChange} value={this.state.recentReply} name="recentReply" placeholder="Reply.."></textarea>
                                     <Col offset-0>
-                                       <Button className="btn-info" onClick={(comment)=>this.postComment(this.state.recentReply)}>Reply</Button>
+                                       <Button variant="outline-info rounded" onClick={(comment)=>this.postComment(this.state.recentReply)}>Reply</Button>
                                     </Col>
                                 </div>
 
@@ -126,10 +130,8 @@ class Post extends Component {
                        )
                    })
 
-                } 
-                <Footer/>
-                  
-            </Container>
+                }   
+            </div>
 
         );
     }

@@ -5,7 +5,6 @@ import Post from './Post';
 import CourseWise from '../data/coursewisePosts.json';
 import ReactDOM from 'react-dom';
 import{Container} from 'react-bootstrap'
-import Footer from './footer'
 
 
 class Forum extends Component {

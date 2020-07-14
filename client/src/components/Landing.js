@@ -12,9 +12,10 @@ class Landing extends Component {
               <Container>
                 <Jumbotron>
                   <h2>Welcome to ASK-IT </h2>
-                  <p>In ASK-IT website you can ask about courses and get answers from friends, sharing information about exams .</p>
+                  <p>With ASK-IT you can ask about courses and get answers from friends,Exchange of information respect to all courses in MS(CE) .
+                  </p>
                   <Link to ="/register">
-                    <Button className="btn-info"> Register Now</Button>
+                    <Button className="btn-info rounded-pill"> Register Now</Button>
                   </Link>
                 </Jumbotron>  
                 <Row className="show-grid text-center">
