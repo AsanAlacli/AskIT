@@ -68,6 +68,7 @@ class Post extends Component {
         this.state.recentReply=comment;
         console.log("comment---",this.state.recentReply);
     }
+    
       
     render() {
         //  console.log("New DAta---",this.props.parent);
@@ -98,7 +99,7 @@ class Post extends Component {
                                     <h6 style={{fontWeight:"bold"}}> {post.postContent}</h6>
                                 </div>
                                 <div className="col-12">
-                                <p><span style={{fontWeight:"bold"}}>Posted By:</span>  {post.author}</p>
+                                <p><span style={{fontWeight:"bold"}}>Posted By:</span>  {this.state.first_name}</p>
                                 </div>
                                 <div className="col-12">
                                 <p><span style={{fontWeight:"bold"}}>Posted on: </span> {post.date}</p>
