@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import M from '../assets/img/Mohaimn.jpg'
+import M from '../assets/img/mohaimn.jpg'
 import D from '../assets/img/Dawar.png'
 import F from '../assets/img/Farnoosh.jpg'
 import H from '../assets/img/Hasan.png'

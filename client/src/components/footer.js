@@ -23,7 +23,7 @@ export default function Footer() {
            <FontAwesomeIcon icon={faGithub} size="2x" /> </a>
 
            <a href="https://github.com/AsanAlacli/AskIT" className="heroku social">
-           <img  style={{paddingBottom:"14px", color:"#033859"}} src="https://img.icons8.com/windows/32/000000/heroku.png"/> </a>
+           <img alt="heruko" style={{paddingBottom:"14px", color:"#033859"}} src="https://img.icons8.com/windows/32/000000/heroku.png"/> </a>
         </div>
         
         <div className="col col-12 text-center"> 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { register } from './UserFunctions'
 import Footer from './footer'
+import{Container,Row,Col,Button,Form,FormGroup} from 'react-bootstrap'
+import { Label,Input} from 'reactstrap';
 
 class Register extends Component {
     constructor() {
@@ -37,57 +39,57 @@ class Register extends Component {
 
     render () {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6 mt-5 mx-auto">
-                        <form noValidate onSubmit={this.onSubmit}>
+            <Container>
+                <Row>
+                    <Col xs={8} md={6} className="mt-5 mx-auto">
+                        <Form noValidate onSubmit={this.onSubmit}>
                             <h1 className="h2 mb-3 font-weight-bolder text-center"> Register Now </h1>
-                            <div className="form-group">
-                                <label htmlFor="first_name">First Name</label>
-                                <input type="text"
+                            <FormGroup>
+                                <Label htmlFor="first_name">First Name</Label>
+                                <Input type="text"
                                     className="form-control form-control-lg"
                                     name="first_name"
                                     placeholder="Enter First Name"
                                     value={this.state.first_name}
                                     onChange={this.onChange} />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="last_name">Last Name</label>
-                                <input type="text"
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="last_name">Last Name</Label>
+                                <Input type="text"
                                     className="form-control form-control-lg"
                                     name="last_name"
                                     placeholder="Enter Last Name"
                                     value={this.state.last_name}
                                     onChange={this.onChange} />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="email">E-Mail Address</label>
-                                <input type="email"
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="email">E-Mail Address</Label>
+                                <Input type="email"
                                     className="form-control form-control-lg"
                                     name="email"
                                     placeholder="Enter Email"
                                     value={this.state.email}
                                     onChange={this.onChange} />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="password">Password </label>
-                                <input type="password"
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="password">Password </Label>
+                                <Input type="password"
                                     className="form-control form-control-lg"
                                     name="password"
                                     placeholder="Enter Password"
                                     value={this.state.password}
                                     onChange={this.onChange} />
-                            </div>
+                            </FormGroup>
 
-                            <button type="submit" className="btn btn-lg btn-info btn-block rounded-pill">
+                            <Button type="submit" className="btn btn-lg btn-info btn-block rounded-pill">
                                 Register
-                            </button>
-                        </form>
-                    </div>
-                </div>
+                            </Button>
+                        </Form>
+                    </Col>
+                </Row>
                 <Footer />           
 
-            </div>
+            </Container>
         )
     }
 }
