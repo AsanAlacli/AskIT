@@ -1,4 +1,4 @@
-## SEPAproject( Student Educational Performance Analysis )
+## AskIt project
 - This project is for Advance web technologies course in UDE .
 <img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/z.png"  width="200" height="170">
 
@@ -14,14 +14,14 @@ https://youtu.be/6xw0cGu3aVY
 ## Home page
 <img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/home1.png"  width="560" height="297">
 
-## Footer page
+## Footer 
 <img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/footer.png"  width="560" height="297">
 
 ## Login page
-<img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/login.png"  width="560" height="297">
+<img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/login.png"  width="300" height="400">
 
 ## Register page
-<img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/register.png"  width="560" height="297">
+<img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/register.png"  width="300" height="400">
 
 ## Profile page
 <img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/profile.png"  width="560" height="297">
