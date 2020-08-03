@@ -1,4 +1,4 @@
-## AskIt project
+## AskIT project (AWT SoSe20)
 - This project is for Advance web technologies course in UDE .
 <img src="https://github.com/AsanAlacli/AskIT/blob/master/client/src/assets/img/z.png"  width="200" height="170">
 
