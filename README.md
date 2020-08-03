@@ -48,6 +48,7 @@ This project is based on the following technologies:
   
 * Deploy
   + [Heroku](https://www.heroku.com/home)
+  + https://git.heroku.com/group4askit.git
   
   
 ## How to run the project:
