@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className=" pt-4 mt-5 bg-warning ">
       <div className="row">
         <div className="col col-12 text-center">
-           <a href="#" className="youtube social ">
+           <a href="https://www.youtube.com/watch?v=6xw0cGu3aVY" className="youtube social ">
            <FontAwesomeIcon icon={faYoutube} size="2x" /> </a>
 
            <a href="https://github.com/AsanAlacli/AskIT" className="github social">
